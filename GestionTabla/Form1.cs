@@ -250,5 +250,24 @@ namespace GestionTabla
         {
             labelPaginacion.Text = "Cliente " + (clientesBindingSource.Position + 1) + " de " + clientesBindingSource.Count;
         }
+
+        private void botonBuscar_Click(object sender, EventArgs e)
+        {
+            String campoBusqueda = textBoxFiltro.Text;
+            String filtroBusqueda = comboBoxFiltro.Text;
+
+            //HACER UN CONDICIONAL PASANDOLE LOS NOMBRES DE LAS MOVIDAS BIEN COMO SON EN LA BASE DE DATOS
+
+            int indice = clientesBindingSource.Find(campoBusqueda, filtroBusqueda);
+
+            if (indice >= 0)
+            {
+                clientesBindingSource.Position = indice;
+            }
+            else
+            {
+                MessageBox.Show("No se encontró ningún registro con el campo especificado", "Aviso", MessageBoxButtons.OK, MessageBoxIcon.Information);
+            }
+        }
     }
 }

@@ -61,7 +61,7 @@
             this.botonAniadir = new System.Windows.Forms.Button();
             this.botonBorrar = new System.Windows.Forms.Button();
             this.botonBuscar = new System.Windows.Forms.Button();
-            this.textBox1 = new System.Windows.Forms.TextBox();
+            this.textBoxFiltro = new System.Windows.Forms.TextBox();
             this.comboBoxFiltro = new System.Windows.Forms.ComboBox();
             this.botonInicio = new System.Windows.Forms.Button();
             this.botonAnterior = new System.Windows.Forms.Button();
@@ -371,13 +371,14 @@
             this.botonBuscar.TabIndex = 19;
             this.botonBuscar.Text = "Buscar";
             this.botonBuscar.UseVisualStyleBackColor = true;
+            this.botonBuscar.Click += new System.EventHandler(this.botonBuscar_Click);
             // 
-            // textBox1
+            // textBoxFiltro
             // 
-            this.textBox1.Location = new System.Drawing.Point(772, 39);
-            this.textBox1.Name = "textBox1";
-            this.textBox1.Size = new System.Drawing.Size(100, 20);
-            this.textBox1.TabIndex = 20;
+            this.textBoxFiltro.Location = new System.Drawing.Point(772, 39);
+            this.textBoxFiltro.Name = "textBoxFiltro";
+            this.textBoxFiltro.Size = new System.Drawing.Size(100, 20);
+            this.textBoxFiltro.TabIndex = 20;
             // 
             // comboBoxFiltro
             // 
@@ -456,7 +457,7 @@
             this.Controls.Add(this.botonAnterior);
             this.Controls.Add(this.botonInicio);
             this.Controls.Add(this.comboBoxFiltro);
-            this.Controls.Add(this.textBox1);
+            this.Controls.Add(this.textBoxFiltro);
             this.Controls.Add(this.botonBuscar);
             this.Controls.Add(this.botonBorrar);
             this.Controls.Add(this.botonAniadir);
@@ -506,7 +507,7 @@
         private System.Windows.Forms.Button botonBorrar;
         private System.Windows.Forms.Button botonAniadir;
         private System.Windows.Forms.ToolStripStatusLabel toolStripStatusLabel1;
-        private System.Windows.Forms.TextBox textBox1;
+        private System.Windows.Forms.TextBox textBoxFiltro;
         private System.Windows.Forms.Button botonBuscar;
         private System.Windows.Forms.ComboBox comboBoxFiltro;
         private System.Windows.Forms.Button botonFinal;
