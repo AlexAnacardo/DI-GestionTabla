@@ -4,10 +4,12 @@ using System.ComponentModel;
 using System.Data;
 using System.Drawing;
 using System.Linq;
+using System.Reflection.Emit;
 using System.Text;
 using System.Text.RegularExpressions;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using static System.Windows.Forms.VisualStyles.VisualStyleElement;
 
 namespace GestionTabla
 {
@@ -26,6 +28,8 @@ namespace GestionTabla
             //Al cargar el formulario se entra por defecto en modo consulta
             this.DatosCliente.Enabled = false;
             toolStripStatusLabel1.Text = "";
+
+            comboBoxFiltro.SelectedIndex = 0;
         }
 
         private void clientesBindingNavigatorSaveItem_Click(object sender, EventArgs e)
@@ -215,6 +219,36 @@ namespace GestionTabla
             {
                 errorProvider1.SetError(correoTextBox, "");
             }
+        }
+
+        private void botonInicio_Click(object sender, EventArgs e)
+        {
+            clientesBindingSource.MoveFirst();
+        }
+
+        private void botonAnterior_Click(object sender, EventArgs e)
+        {
+            clientesBindingSource.MovePrevious();
+        }
+
+        private void botonSiguiente_Click(object sender, EventArgs e)
+        {
+            clientesBindingSource.MoveNext();
+        }
+
+        private void botonFinal_Click(object sender, EventArgs e)
+        {
+            clientesBindingSource.MoveLast();
+        }
+
+        private void clientesBindingSource_CurrentChanged(object sender, EventArgs e)
+        {
+
+        }
+
+        private void clientesBindingSource_PositionChanged(object sender, EventArgs e)
+        {
+            labelPaginacion.Text = "Cliente " + (clientesBindingSource.Position + 1) + " de " + clientesBindingSource.Count;
         }
     }
 }
