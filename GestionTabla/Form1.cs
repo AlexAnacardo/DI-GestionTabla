@@ -61,20 +61,20 @@ namespace GestionTabla
         private void botonAceptar_Click(object sender, EventArgs e)
         {
             if (nombreTextBox.Text.Equals("") | telefonoTextBox.Text.Equals("") | direccionTextBox.Text.Equals(""))
-            {
-                MessageBox.Show("Debe introducir todos los datos", this.Text, MessageBoxButtons.OK, MessageBoxIcon.Error);
+            {                
                 if (nombreTextBox.Text.Equals(""))
                 {
                     errorProvider1.SetError(nombreTextBox, "Debe introducir el nombre");
                 }
-                else if(telefonoTextBox.Text.Equals(""))
+                if(telefonoTextBox.Text.Equals(""))
                 {
                     errorProvider1.SetError(telefonoTextBox, "Debe introducir el isbn");
                 }
-                else
+                if(direccionTextBox.Text.Equals(""))
                 {
                     errorProvider1.SetError(direccionTextBox, "Debe introducir la dirección");
                 }
+                MessageBox.Show("Debe introducir todos los datos", this.Text, MessageBoxButtons.OK, MessageBoxIcon.Error);
             }
             else
             {
@@ -163,12 +163,27 @@ namespace GestionTabla
 
         private void botonBorrar_Click(object sender, EventArgs e)
         {
-            if (MessageBox.Show("Borrar?", "Aviso", MessageBoxButtons.YesNo, MessageBoxIcon.Warning, MessageBoxDefaultButton.Button2) == DialogResult.Yes)
+            if (clientesBindingSource.Count > 0)
             {
-                clientesBindingSource.RemoveCurrent();
+                if (MessageBox.Show("Borrar?", "Aviso", MessageBoxButtons.YesNo, MessageBoxIcon.Warning, MessageBoxDefaultButton.Button2) == DialogResult.Yes)
+                {
+                    clientesBindingSource.RemoveCurrent();
 
-                statusStrip1.Text = "Libro borrado";
-            }   
+                    statusStrip1.Text = "Libro borrado";
+                }
+            }  
+        }
+
+        private void Form1_FormClosing(object sender, FormClosingEventArgs e)
+        {
+            if (!(clientesDataSet.GetChanges() is null))
+            {
+                if (MessageBox.Show("¿Guardar las modificaciones pendientes antes de salir?", this.Text, MessageBoxButtons.YesNo, MessageBoxIcon.Information, MessageBoxDefaultButton.Button2) == DialogResult.Yes)
+                {
+                    this.clientesBindingSource.CancelEdit();
+                    this.tableAdapterManager.UpdateAll(this.clientesDataSet);
+                }
+            }
         }
     }
 }

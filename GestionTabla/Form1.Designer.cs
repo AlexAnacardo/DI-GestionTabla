@@ -239,6 +239,7 @@
             this.imagenPictureBox.Location = new System.Drawing.Point(428, 64);
             this.imagenPictureBox.Name = "imagenPictureBox";
             this.imagenPictureBox.Size = new System.Drawing.Size(155, 221);
+            this.imagenPictureBox.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
             this.imagenPictureBox.TabIndex = 16;
             this.imagenPictureBox.TabStop = false;
             this.imagenPictureBox.Click += new System.EventHandler(this.imagenPictureBox_Click);
@@ -448,7 +449,7 @@
             this.botonEditar.Location = new System.Drawing.Point(458, 39);
             this.botonEditar.Name = "botonEditar";
             this.botonEditar.Size = new System.Drawing.Size(75, 23);
-            this.botonEditar.TabIndex = 19;
+            this.botonEditar.TabIndex = 2;
             this.botonEditar.Text = "Editar";
             this.botonEditar.UseVisualStyleBackColor = true;
             this.botonEditar.Click += new System.EventHandler(this.botonEditar_Click);
@@ -458,7 +459,7 @@
             this.botonGuardar.Location = new System.Drawing.Point(606, 38);
             this.botonGuardar.Name = "botonGuardar";
             this.botonGuardar.Size = new System.Drawing.Size(75, 23);
-            this.botonGuardar.TabIndex = 20;
+            this.botonGuardar.TabIndex = 3;
             this.botonGuardar.Text = "Guardar";
             this.botonGuardar.UseVisualStyleBackColor = true;
             this.botonGuardar.Click += new System.EventHandler(this.botonGuardar_Click);
@@ -468,7 +469,7 @@
             this.botonAniadir.Location = new System.Drawing.Point(256, 39);
             this.botonAniadir.Name = "botonAniadir";
             this.botonAniadir.Size = new System.Drawing.Size(75, 23);
-            this.botonAniadir.TabIndex = 21;
+            this.botonAniadir.TabIndex = 0;
             this.botonAniadir.Text = "+";
             this.botonAniadir.UseVisualStyleBackColor = true;
             this.botonAniadir.Click += new System.EventHandler(this.botonAniadir_Click);
@@ -478,7 +479,7 @@
             this.botonBorrar.Location = new System.Drawing.Point(337, 39);
             this.botonBorrar.Name = "botonBorrar";
             this.botonBorrar.Size = new System.Drawing.Size(75, 23);
-            this.botonBorrar.TabIndex = 22;
+            this.botonBorrar.TabIndex = 1;
             this.botonBorrar.Text = "-";
             this.botonBorrar.UseVisualStyleBackColor = true;
             this.botonBorrar.Click += new System.EventHandler(this.botonBorrar_Click);
@@ -496,7 +497,8 @@
             this.Controls.Add(this.DatosCliente);
             this.Controls.Add(this.clientesBindingNavigator);
             this.Name = "Form1";
-            this.Text = "Form1";
+            this.Text = "1";
+            this.FormClosing += new System.Windows.Forms.FormClosingEventHandler(this.Form1_FormClosing);
             this.Load += new System.EventHandler(this.Form1_Load);
             ((System.ComponentModel.ISupportInitialize)(this.clientesBindingSource)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.clientesDataSet)).EndInit();
