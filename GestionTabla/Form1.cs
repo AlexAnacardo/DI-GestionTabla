@@ -24,6 +24,7 @@ namespace GestionTabla
 
             //Al cargar el formulario se entra por defecto en modo consulta
             this.DatosCliente.Enabled = false;
+            toolStripStatusLabel1.Text = "";
         }
 
         private void clientesBindingNavigatorSaveItem_Click(object sender, EventArgs e)
@@ -84,7 +85,8 @@ namespace GestionTabla
                 this.botonEditar.Enabled = true;
                 this.botonGuardar.Enabled = true;
                 this.DatosCliente.Enabled = false;
-                statusStrip1.Text = "Terminado";
+                
+                toolStripStatusLabel1.Text = "Cliente añadido";
             }
         }
 
@@ -97,6 +99,7 @@ namespace GestionTabla
             this.botonGuardar.Enabled = true;
             this.DatosCliente.Enabled = false;
             errorProvider1.Clear();
+            toolStripStatusLabel1.Text = "Cancelada creacion de cliente";
         }
 
         private void botonEditar_Click(object sender, EventArgs e)
@@ -148,7 +151,7 @@ namespace GestionTabla
         {
             tableAdapterManager.UpdateAll(clientesDataSet);
 
-            statusStrip1.Text = "Datos guardados";
+            toolStripStatusLabel1.Text = "Datos guardados";
         }
 
         private void botonAniadir_Click(object sender, EventArgs e)
@@ -169,7 +172,7 @@ namespace GestionTabla
                 {
                     clientesBindingSource.RemoveCurrent();
 
-                    statusStrip1.Text = "Libro borrado";
+                    toolStripStatusLabel1.Text = "Cliente borrado";
                 }
             }  
         }

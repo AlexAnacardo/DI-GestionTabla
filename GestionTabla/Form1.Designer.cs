@@ -69,6 +69,7 @@
             this.clientesTableAdapter = new GestionTabla.ClientesDataSetTableAdapters.ClientesTableAdapter();
             this.tableAdapterManager = new GestionTabla.ClientesDataSetTableAdapters.TableAdapterManager();
             this.statusStrip1 = new System.Windows.Forms.StatusStrip();
+            this.toolStripStatusLabel1 = new System.Windows.Forms.ToolStripStatusLabel();
             this.botonEditar = new System.Windows.Forms.Button();
             this.botonGuardar = new System.Windows.Forms.Button();
             this.botonAniadir = new System.Windows.Forms.Button();
@@ -88,6 +89,7 @@
             this.clientesBindingNavigator.SuspendLayout();
             this.DatosCliente.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.errorProvider1)).BeginInit();
+            this.statusStrip1.SuspendLayout();
             this.SuspendLayout();
             // 
             // id_ClienteLabel
@@ -438,11 +440,19 @@
             // 
             // statusStrip1
             // 
+            this.statusStrip1.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
+            this.toolStripStatusLabel1});
             this.statusStrip1.Location = new System.Drawing.Point(0, 428);
             this.statusStrip1.Name = "statusStrip1";
             this.statusStrip1.Size = new System.Drawing.Size(800, 22);
             this.statusStrip1.TabIndex = 18;
             this.statusStrip1.Text = "statusStrip1";
+            // 
+            // toolStripStatusLabel1
+            // 
+            this.toolStripStatusLabel1.Name = "toolStripStatusLabel1";
+            this.toolStripStatusLabel1.Size = new System.Drawing.Size(118, 17);
+            this.toolStripStatusLabel1.Text = "toolStripStatusLabel1";
             // 
             // botonEditar
             // 
@@ -497,7 +507,7 @@
             this.Controls.Add(this.DatosCliente);
             this.Controls.Add(this.clientesBindingNavigator);
             this.Name = "Form1";
-            this.Text = "1";
+            this.Text = "Gestion clientes";
             this.FormClosing += new System.Windows.Forms.FormClosingEventHandler(this.Form1_FormClosing);
             this.Load += new System.EventHandler(this.Form1_Load);
             ((System.ComponentModel.ISupportInitialize)(this.clientesBindingSource)).EndInit();
@@ -509,6 +519,8 @@
             this.DatosCliente.ResumeLayout(false);
             this.DatosCliente.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.errorProvider1)).EndInit();
+            this.statusStrip1.ResumeLayout(false);
+            this.statusStrip1.PerformLayout();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -551,6 +563,7 @@
         private System.Windows.Forms.Button botonGuardar;
         private System.Windows.Forms.Button botonBorrar;
         private System.Windows.Forms.Button botonAniadir;
+        private System.Windows.Forms.ToolStripStatusLabel toolStripStatusLabel1;
     }
 }
 
