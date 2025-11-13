@@ -5,6 +5,7 @@ using System.Data;
 using System.Drawing;
 using System.Linq;
 using System.Text;
+using System.Text.RegularExpressions;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 
@@ -74,8 +75,18 @@ namespace GestionTabla
                 if(direccionTextBox.Text.Equals(""))
                 {
                     errorProvider1.SetError(direccionTextBox, "Debe introducir la dirección");
-                }
+                }            
                 MessageBox.Show("Debe introducir todos los datos", this.Text, MessageBoxButtons.OK, MessageBoxIcon.Error);
+                toolStripStatusLabel1.Text = "Hay 1 o mas campos erroneos";
+            }
+            else if (correoTextBox.Text != "" && !correoTextBox.Text.EndsWith("@gmail.com") && !correoTextBox.Text.EndsWith("@gmail.es") && !correoTextBox.Text.EndsWith("@outlook.com") && !correoTextBox.Text.EndsWith("@outlook.es"))
+            {
+                errorProvider1.SetError(correoTextBox, "El correo electrónico debe acabar en @gmail.com / @gmail.es / @outlook.es / @outlook.com");
+                toolStripStatusLabel1.Text = "Hay 1 o mas campos erroneos";
+            }
+            if (!Regex.IsMatch(telefonoTextBox.Text, "[0-9]9", RegexOptions.IgnoreCase))
+            {
+                errorProvider1.SetError(telefonoTextBox, "Formato de telefono invalido, debe seguir un formato 123456789");
             }
             else
             {
@@ -85,7 +96,8 @@ namespace GestionTabla
                 this.botonEditar.Enabled = true;
                 this.botonGuardar.Enabled = true;
                 this.DatosCliente.Enabled = false;
-                
+                errorProvider1.Clear();
+
                 toolStripStatusLabel1.Text = "Cliente añadido";
             }
         }
@@ -139,7 +151,11 @@ namespace GestionTabla
         {
             if (telefonoTextBox.Text.Equals(""))
             {
-                errorProvider1.SetError(telefonoTextBox, "Debe introducir el telefono");
+                errorProvider1.SetError(telefonoTextBox, "Debe introducir el telefono");                
+            }
+            else if (!Regex.IsMatch(telefonoTextBox.Text, "[0-9]9", RegexOptions.IgnoreCase))
+            {
+                errorProvider1.SetError(telefonoTextBox, "Formato de telefono invalido, debe seguir un formato 123456789");
             }
             else
             {
@@ -186,6 +202,18 @@ namespace GestionTabla
                     this.clientesBindingSource.CancelEdit();
                     this.tableAdapterManager.UpdateAll(this.clientesDataSet);
                 }
+            }
+        }
+
+        private void correoTextBox_Validating(object sender, CancelEventArgs e)
+        {
+            if (correoTextBox.Text != "" && !correoTextBox.Text.EndsWith("@gmail.com") && !correoTextBox.Text.EndsWith("@gmail.es") && !correoTextBox.Text.EndsWith("@outlook.com") && !correoTextBox.Text.EndsWith("@outlook.es"))
+            {
+                errorProvider1.SetError(correoTextBox, "El correo electrónico debe acabar en @gmail.com / @gmail.es / @outlook.es / @outlook.com");
+            }
+            else
+            {
+                errorProvider1.SetError(correoTextBox, "");
             }
         }
     }

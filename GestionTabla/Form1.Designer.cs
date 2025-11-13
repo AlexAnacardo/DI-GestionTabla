@@ -233,6 +233,7 @@
             this.correoTextBox.Name = "correoTextBox";
             this.correoTextBox.Size = new System.Drawing.Size(200, 20);
             this.correoTextBox.TabIndex = 14;
+            this.correoTextBox.Validating += new System.ComponentModel.CancelEventHandler(this.correoTextBox_Validating);
             // 
             // imagenPictureBox
             // 
