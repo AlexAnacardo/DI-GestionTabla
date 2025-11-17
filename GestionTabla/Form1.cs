@@ -256,9 +256,51 @@ namespace GestionTabla
             String campoBusqueda = textBoxFiltro.Text;
             String filtroBusqueda = comboBoxFiltro.Text;
 
-            //HACER UN CONDICIONAL PASANDOLE LOS NOMBRES DE LAS MOVIDAS BIEN COMO SON EN LA BASE DE DATOS
 
-            int indice = clientesBindingSource.Find(campoBusqueda, filtroBusqueda);
+            int indice = -1;
+
+            switch (filtroBusqueda)
+            {
+                case "Id cliente":
+                    try
+                    {
+                        indice = clientesBindingSource.Find("Id_Cliente", campoBusqueda);
+                    }
+                    catch(System.FormatException ex)
+                    {
+                        MessageBox.Show("El formato de ID de cliente introducido es incorrecto", "Aviso", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                    }
+                    
+                break;
+
+                case "Nombre":
+                    indice = clientesBindingSource.Find("Nombre_Cliente", campoBusqueda);
+                break;
+
+                case "Apellidos":
+                    indice = clientesBindingSource.Find("Apellidos_Cliente", campoBusqueda);
+                break;
+
+                case "Fecha nacimiento":
+                    indice = clientesBindingSource.Find("Fecha_Nacimiento", campoBusqueda);
+                break;
+
+                case "Direccion":
+                    indice = clientesBindingSource.Find("Direccion", campoBusqueda);
+                break;
+
+                case "Telefono":
+                    indice = clientesBindingSource.Find("Telefono", campoBusqueda);
+                break;
+
+                case "Correo electronico":
+                    indice = clientesBindingSource.Find("Correo_Electronico", campoBusqueda);
+                break;
+
+                default:
+                    
+                break;
+            }
 
             if (indice >= 0)
             {
