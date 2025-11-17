@@ -325,7 +325,7 @@
             // 
             // botonEditar
             // 
-            this.botonEditar.Location = new System.Drawing.Point(431, 39);
+            this.botonEditar.Location = new System.Drawing.Point(431, 23);
             this.botonEditar.Name = "botonEditar";
             this.botonEditar.Size = new System.Drawing.Size(75, 23);
             this.botonEditar.TabIndex = 2;
@@ -335,7 +335,7 @@
             // 
             // botonGuardar
             // 
-            this.botonGuardar.Location = new System.Drawing.Point(520, 39);
+            this.botonGuardar.Location = new System.Drawing.Point(520, 23);
             this.botonGuardar.Name = "botonGuardar";
             this.botonGuardar.Size = new System.Drawing.Size(75, 23);
             this.botonGuardar.TabIndex = 3;
@@ -345,7 +345,7 @@
             // 
             // botonAniadir
             // 
-            this.botonAniadir.Location = new System.Drawing.Point(260, 39);
+            this.botonAniadir.Location = new System.Drawing.Point(260, 23);
             this.botonAniadir.Name = "botonAniadir";
             this.botonAniadir.Size = new System.Drawing.Size(75, 23);
             this.botonAniadir.TabIndex = 0;
@@ -355,7 +355,7 @@
             // 
             // botonBorrar
             // 
-            this.botonBorrar.Location = new System.Drawing.Point(341, 39);
+            this.botonBorrar.Location = new System.Drawing.Point(341, 23);
             this.botonBorrar.Name = "botonBorrar";
             this.botonBorrar.Size = new System.Drawing.Size(75, 23);
             this.botonBorrar.TabIndex = 1;
@@ -365,7 +365,7 @@
             // 
             // botonBuscar
             // 
-            this.botonBuscar.Location = new System.Drawing.Point(887, 39);
+            this.botonBuscar.Location = new System.Drawing.Point(887, 23);
             this.botonBuscar.Name = "botonBuscar";
             this.botonBuscar.Size = new System.Drawing.Size(75, 23);
             this.botonBuscar.TabIndex = 19;
@@ -375,7 +375,7 @@
             // 
             // textBoxFiltro
             // 
-            this.textBoxFiltro.Location = new System.Drawing.Point(772, 39);
+            this.textBoxFiltro.Location = new System.Drawing.Point(772, 23);
             this.textBoxFiltro.Name = "textBoxFiltro";
             this.textBoxFiltro.Size = new System.Drawing.Size(100, 20);
             this.textBoxFiltro.TabIndex = 20;
@@ -392,14 +392,14 @@
             "Direccion",
             "Telefono",
             "Correo electrónico"});
-            this.comboBoxFiltro.Location = new System.Drawing.Point(636, 39);
+            this.comboBoxFiltro.Location = new System.Drawing.Point(636, 23);
             this.comboBoxFiltro.Name = "comboBoxFiltro";
             this.comboBoxFiltro.Size = new System.Drawing.Size(121, 21);
             this.comboBoxFiltro.TabIndex = 21;
             // 
             // botonInicio
             // 
-            this.botonInicio.Location = new System.Drawing.Point(13, 39);
+            this.botonInicio.Location = new System.Drawing.Point(13, 23);
             this.botonInicio.Name = "botonInicio";
             this.botonInicio.Size = new System.Drawing.Size(30, 23);
             this.botonInicio.TabIndex = 22;
@@ -409,7 +409,7 @@
             // 
             // botonAnterior
             // 
-            this.botonAnterior.Location = new System.Drawing.Point(46, 39);
+            this.botonAnterior.Location = new System.Drawing.Point(46, 23);
             this.botonAnterior.Name = "botonAnterior";
             this.botonAnterior.Size = new System.Drawing.Size(30, 23);
             this.botonAnterior.TabIndex = 23;
@@ -419,7 +419,7 @@
             // 
             // botonSiguiente
             // 
-            this.botonSiguiente.Location = new System.Drawing.Point(176, 39);
+            this.botonSiguiente.Location = new System.Drawing.Point(176, 23);
             this.botonSiguiente.Name = "botonSiguiente";
             this.botonSiguiente.Size = new System.Drawing.Size(30, 23);
             this.botonSiguiente.TabIndex = 24;
@@ -429,7 +429,7 @@
             // 
             // botonFinal
             // 
-            this.botonFinal.Location = new System.Drawing.Point(212, 39);
+            this.botonFinal.Location = new System.Drawing.Point(212, 23);
             this.botonFinal.Name = "botonFinal";
             this.botonFinal.Size = new System.Drawing.Size(30, 23);
             this.botonFinal.TabIndex = 25;
@@ -440,7 +440,7 @@
             // labelPaginacion
             // 
             this.labelPaginacion.AutoSize = true;
-            this.labelPaginacion.Location = new System.Drawing.Point(91, 44);
+            this.labelPaginacion.Location = new System.Drawing.Point(91, 28);
             this.labelPaginacion.Name = "labelPaginacion";
             this.labelPaginacion.Size = new System.Drawing.Size(70, 13);
             this.labelPaginacion.TabIndex = 26;

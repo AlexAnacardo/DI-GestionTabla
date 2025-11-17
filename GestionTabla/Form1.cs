@@ -99,7 +99,16 @@ namespace GestionTabla
                 this.botonBorrar.Enabled = true;
                 this.botonEditar.Enabled = true;
                 this.botonGuardar.Enabled = true;
+                this.comboBoxFiltro.Enabled = true;
+                this.textBoxFiltro.Enabled = true;
+                this.botonBuscar.Enabled = true;
+                this.botonInicio.Enabled = true;
+                this.botonAnterior.Enabled = true;
+                this.botonSiguiente.Enabled = true;
+                this.botonFinal.Enabled = true;
+
                 this.DatosCliente.Enabled = false;
+                
                 errorProvider1.Clear();
 
                 toolStripStatusLabel1.Text = "Cliente añadido";
@@ -113,6 +122,14 @@ namespace GestionTabla
             this.botonBorrar.Enabled = true;
             this.botonEditar.Enabled = true;
             this.botonGuardar.Enabled = true;
+            this.comboBoxFiltro.Enabled = true;
+            this.textBoxFiltro.Enabled = true;
+            this.botonBuscar.Enabled = true;
+            this.botonInicio.Enabled = true;
+            this.botonAnterior.Enabled = true;
+            this.botonSiguiente.Enabled = true;
+            this.botonFinal.Enabled = true;
+
             this.DatosCliente.Enabled = false;
             errorProvider1.Clear();
             toolStripStatusLabel1.Text = "Cancelada creacion de cliente";
@@ -125,6 +142,13 @@ namespace GestionTabla
             this.botonBorrar.Enabled = false;
             this.botonEditar.Enabled = false;
             this.botonGuardar.Enabled = false;
+            this.comboBoxFiltro.Enabled = false;
+            this.textBoxFiltro.Enabled = false;
+            this.botonBuscar.Enabled = false;
+            this.botonInicio.Enabled = false;
+            this.botonAnterior.Enabled = false;
+            this.botonSiguiente.Enabled = false;
+            this.botonFinal.Enabled = false;
         }
 
         private void nombreTextBox_Validating(object sender, CancelEventArgs e)
@@ -182,6 +206,13 @@ namespace GestionTabla
             this.botonBorrar.Enabled = false;
             this.botonEditar.Enabled = false;
             this.botonGuardar.Enabled = false;
+            this.comboBoxFiltro.Enabled = false;
+            this.textBoxFiltro.Enabled = false;
+            this.botonBuscar.Enabled = false;
+            this.botonInicio.Enabled = false;
+            this.botonAnterior.Enabled = false;
+            this.botonSiguiente.Enabled = false;
+            this.botonFinal.Enabled = false;
         }
 
         private void botonBorrar_Click(object sender, EventArgs e)
