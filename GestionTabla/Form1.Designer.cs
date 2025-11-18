@@ -501,7 +501,7 @@
             this.Controls.Add(this.statusStrip1);
             this.Controls.Add(this.DatosCliente);
             this.Name = "Form1";
-            this.Text = "Gestion clientes";
+            this.Text = "Gestión clientes";
             this.FormClosing += new System.Windows.Forms.FormClosingEventHandler(this.Form1_FormClosing);
             this.Load += new System.EventHandler(this.Form1_Load);
             this.KeyDown += new System.Windows.Forms.KeyEventHandler(this.Form1_KeyDown);

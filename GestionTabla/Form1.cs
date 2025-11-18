@@ -15,6 +15,7 @@ namespace GestionTabla
 {
     public partial class Form1 : Form
     {
+        Boolean registrosCambiados;
         public Form1()
         {
             InitializeComponent();
@@ -57,6 +58,8 @@ namespace GestionTabla
             toolTip1.SetToolTip(this.imagenPictureBox, "Campo imagen del usuario");
             toolTip1.SetToolTip(this.botonAceptar, "Añade los datos introducidos a la tabla de usuarios (Si pasan la validación)");
             toolTip1.SetToolTip(this.botonCancelar, "Cancela la operación de añadir un usuario a la tabla");
+
+            registrosCambiados = false;
         }
 
         private void clientesBindingNavigatorSaveItem_Click(object sender, EventArgs e)
@@ -152,6 +155,8 @@ namespace GestionTabla
                 this.botonImprimir.BackgroundImage = GestionTabla.Properties.Resources.botonImprimirE;
 
                 errorProvider1.Clear();
+
+                this.registrosCambiados = true;
 
                 toolStripStatusLabel1.Text = "Cliente añadido";
             }
@@ -307,6 +312,8 @@ namespace GestionTabla
                 {
                     clientesBindingSource.RemoveCurrent();
 
+                    this.registrosCambiados = true;
+
                     toolStripStatusLabel1.Text = "Cliente borrado";
                 }
             }  
@@ -314,7 +321,18 @@ namespace GestionTabla
 
         private void Form1_FormClosing(object sender, FormClosingEventArgs e)
         {
+            /*
             if (!(clientesDataSet.GetChanges() is null))
+            {
+                if (MessageBox.Show("¿Guardar las modificaciones pendientes antes de salir?", this.Text, MessageBoxButtons.YesNo, MessageBoxIcon.Information, MessageBoxDefaultButton.Button2) == DialogResult.Yes)
+                {
+                    this.clientesBindingSource.CancelEdit();
+                    this.tableAdapterManager.UpdateAll(this.clientesDataSet);
+                }
+            }
+            */
+
+            if (this.registrosCambiados)
             {
                 if (MessageBox.Show("¿Guardar las modificaciones pendientes antes de salir?", this.Text, MessageBoxButtons.YesNo, MessageBoxIcon.Information, MessageBoxDefaultButton.Button2) == DialogResult.Yes)
                 {
