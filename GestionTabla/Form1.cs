@@ -18,6 +18,7 @@ namespace GestionTabla
         public Form1()
         {
             InitializeComponent();
+            this.KeyPreview = true;
         }
 
         private void Form1_Load(object sender, EventArgs e)
@@ -39,13 +40,13 @@ namespace GestionTabla
             toolTip1.SetToolTip(this.botonAnterior, "Ir al anterior registro de la tabla");
             toolTip1.SetToolTip(this.botonSiguiente, "Ir al siguiente registro de la tabla");
             toolTip1.SetToolTip(this.botonFinal, "Ir al último registro de la tabla");
-            toolTip1.SetToolTip(this.botonAniadir, "Añadir un registro a la tabla");
-            toolTip1.SetToolTip(this.botonBorrar, "Elimina el registro actual de la tabla");
-            toolTip1.SetToolTip(this.botonEditar, "Edita el registro actual de la tabla");
-            toolTip1.SetToolTip(this.botonGuardar, "Guarda los cambios realizados");
+            toolTip1.SetToolTip(this.botonAniadir, "Añadir un registro a la tabla (Ctrl + N)");
+            toolTip1.SetToolTip(this.botonBorrar, "Elimina el registro actual de la tabla (Ctrl + D)");
+            toolTip1.SetToolTip(this.botonEditar, "Edita el registro actual de la tabla (Ctrl + E)");
+            toolTip1.SetToolTip(this.botonGuardar, "Guarda los cambios realizados (Ctrl + S)");
             toolTip1.SetToolTip(this.comboBoxFiltro, "Campo que se usará para filtrar la busqueda");
             toolTip1.SetToolTip(this.textBoxFiltro, "Cadena de texto a buscar en el campo especificado");
-            toolTip1.SetToolTip(this.botonBuscar, "Buscar un registro en la tabla mediante la cadena y campo especificado");
+            toolTip1.SetToolTip(this.botonBuscar, "Buscar un registro en la tabla mediante la cadena y campo especificado (Ctrl + B)");
             toolTip1.SetToolTip(this.id_ClienteLabel1, "ID Único del usuario");
             toolTip1.SetToolTip(this.nombreTextBox, "Campo nombre del usuario (Obligatorio)");
             toolTip1.SetToolTip(this.apellidosTextBox, "Campo apellidos del usuario");
@@ -133,6 +134,7 @@ namespace GestionTabla
                 this.botonAnterior.Enabled = true;                
                 this.botonSiguiente.Enabled = true;                
                 this.botonFinal.Enabled = true;
+                this.botonImprimir.Enabled = true;
 
                 this.DatosCliente.Enabled = false;
 
@@ -169,6 +171,7 @@ namespace GestionTabla
             this.botonAnterior.Enabled = true;
             this.botonSiguiente.Enabled = true;
             this.botonFinal.Enabled = true;
+            this.botonImprimir.Enabled = true;
 
             this.DatosCliente.Enabled = false;
 
@@ -202,6 +205,7 @@ namespace GestionTabla
             this.botonAnterior.Enabled = false;
             this.botonSiguiente.Enabled = false;
             this.botonFinal.Enabled = false;
+            this.botonImprimir.Enabled = false;
 
             this.botonAceptar.BackgroundImage = GestionTabla.Properties.Resources.botonConfirmarE;
             this.botonCancelar.BackgroundImage = GestionTabla.Properties.Resources.botonCancelarE;
@@ -279,6 +283,7 @@ namespace GestionTabla
             this.botonAnterior.Enabled = false;
             this.botonSiguiente.Enabled = false;
             this.botonFinal.Enabled = false;
+            this.botonImprimir.Enabled = false;
 
             this.botonAceptar.BackgroundImage = GestionTabla.Properties.Resources.botonConfirmarE;
             this.botonCancelar.BackgroundImage = GestionTabla.Properties.Resources.botonCancelarE;
@@ -463,6 +468,48 @@ namespace GestionTabla
             }
             
             
+        }
+
+        private void Form1_KeyDown(object sender, KeyEventArgs e)
+        {
+            if((!DatosCliente.Enabled) == true)
+            {
+                if (e.Control && e.KeyCode == Keys.N)
+                {
+                    this.botonAniadir_Click(botonAniadir, EventArgs.Empty);
+                    e.Handled = true; // Evita que otros procesos usen la tecla
+                }
+
+                if (e.Control && e.KeyCode == Keys.D)
+                {
+                    this.botonBorrar_Click(botonBorrar, EventArgs.Empty);
+                    e.Handled = true; // Evita que otros procesos usen la tecla
+                }
+
+                if (e.Control && e.KeyCode == Keys.E)
+                {
+                    this.botonEditar_Click(botonEditar, EventArgs.Empty);
+                    e.Handled = true; // Evita que otros procesos usen la tecla
+                }
+
+                if (e.Control && e.KeyCode == Keys.S)
+                {
+                    this.botonGuardar_Click(botonGuardar, EventArgs.Empty);
+                    e.Handled = true; // Evita que otros procesos usen la tecla
+                }
+
+                if (e.Control && e.KeyCode == Keys.I)
+                {
+                    this.botonImprimir_Click(botonImprimir, EventArgs.Empty);
+                    e.Handled = true; // Evita que otros procesos usen la tecla
+                }
+
+                if (e.Control && e.KeyCode == Keys.B)
+                {
+                    this.botonBuscar_Click(botonBuscar, EventArgs.Empty);
+                    e.Handled = true; // Evita que otros procesos usen la tecla
+                }
+            }
         }
     }
 }
