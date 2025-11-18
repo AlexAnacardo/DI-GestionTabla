@@ -129,6 +129,28 @@
       <CopyToOutputDirectory>Always</CopyToOutputDirectory>
       <DependentUpon>Database1.mdf</DependentUpon>
     </Content>
+    <None Include="Resources\botonSiguienteD.png" />
+    <None Include="Resources\botonPrincipioD.png" />
+    <None Include="Resources\botonGuardarD.png" />
+    <None Include="Resources\botonFinalD.png" />
+    <None Include="Resources\botonEliminarD.png" />
+    <None Include="Resources\botonEditarD.png" />
+    <None Include="Resources\botonConfirmarD.png" />
+    <None Include="Resources\botonCancelarD.png" />
+    <None Include="Resources\botonBuscarD.png" />
+    <None Include="Resources\botonAnteriorD.png" />
+    <None Include="Resources\botonCancelarE.png" />
+    <None Include="Resources\botonConfirmarE.png" />
+    <None Include="Resources\botonBuscarE.png" />
+    <None Include="Resources\botonGuardarE.png" />
+    <None Include="Resources\botonEditarE.png" />
+    <None Include="Resources\botonEliminarE.png" />
+    <None Include="Resources\botonAniadirE.png" />
+    <None Include="Resources\botonFinalE.png" />
+    <None Include="Resources\botonSiguienteE.png" />
+    <None Include="Resources\botonAnteriorE.png" />
+    <None Include="Resources\botonPrincipioE.png" />
+    <None Include="Resources\botonAniadirD.png" />
     <None Include="Resources\Captura de pantalla 2025-09-17 101636.png" />
   </ItemGroup>
   <ItemGroup>

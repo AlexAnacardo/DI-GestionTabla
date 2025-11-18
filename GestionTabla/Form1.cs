@@ -27,6 +27,10 @@ namespace GestionTabla
 
             //Al cargar el formulario se entra por defecto en modo consulta
             this.DatosCliente.Enabled = false;
+
+            this.botonAceptar.BackgroundImage = GestionTabla.Properties.Resources.botonConfirmarD;
+            this.botonCancelar.BackgroundImage = GestionTabla.Properties.Resources.botonCancelarD;
+
             toolStripStatusLabel1.Text = "";
 
             comboBoxFiltro.SelectedIndex = 0;
@@ -96,19 +100,32 @@ namespace GestionTabla
             {
                 clientesBindingSource.EndEdit();
                 botonAniadir.Enabled = true;
-                this.botonBorrar.Enabled = true;
-                this.botonEditar.Enabled = true;
-                this.botonGuardar.Enabled = true;
-                this.comboBoxFiltro.Enabled = true;
+                
+                this.botonBorrar.Enabled = true;                
+                this.botonEditar.Enabled = true;                
+                this.botonGuardar.Enabled = true;                
+                this.comboBoxFiltro.Enabled = true;               
                 this.textBoxFiltro.Enabled = true;
-                this.botonBuscar.Enabled = true;
-                this.botonInicio.Enabled = true;
-                this.botonAnterior.Enabled = true;
-                this.botonSiguiente.Enabled = true;
+                this.botonBuscar.Enabled = true;                
+                this.botonInicio.Enabled = true;                
+                this.botonAnterior.Enabled = true;                
+                this.botonSiguiente.Enabled = true;                
                 this.botonFinal.Enabled = true;
 
                 this.DatosCliente.Enabled = false;
-                
+
+                this.botonAceptar.BackgroundImage = GestionTabla.Properties.Resources.botonConfirmarD;
+                this.botonCancelar.BackgroundImage = GestionTabla.Properties.Resources.botonCancelarD;
+                this.botonAniadir.BackgroundImage = GestionTabla.Properties.Resources.botonAniadirE;
+                this.botonBorrar.BackgroundImage = GestionTabla.Properties.Resources.botonEliminarE;
+                this.botonEditar.BackgroundImage = GestionTabla.Properties.Resources.botonEditarE;
+                this.botonGuardar.BackgroundImage = GestionTabla.Properties.Resources.botonGuardarE;
+                this.botonBuscar.BackgroundImage = GestionTabla.Properties.Resources.botonBuscarE;
+                this.botonInicio.BackgroundImage = GestionTabla.Properties.Resources.botonPrincipioE;
+                this.botonAnterior.BackgroundImage = GestionTabla.Properties.Resources.botonAnteriorE;
+                this.botonSiguiente.BackgroundImage = GestionTabla.Properties.Resources.botonSiguienteE;
+                this.botonFinal.BackgroundImage = GestionTabla.Properties.Resources.botonFinalE;
+
                 errorProvider1.Clear();
 
                 toolStripStatusLabel1.Text = "Cliente añadido";
@@ -131,6 +148,18 @@ namespace GestionTabla
             this.botonFinal.Enabled = true;
 
             this.DatosCliente.Enabled = false;
+
+            this.botonAceptar.BackgroundImage = GestionTabla.Properties.Resources.botonConfirmarD;
+            this.botonCancelar.BackgroundImage = GestionTabla.Properties.Resources.botonCancelarD;
+            this.botonAniadir.BackgroundImage = GestionTabla.Properties.Resources.botonAniadirE;
+            this.botonBorrar.BackgroundImage = GestionTabla.Properties.Resources.botonEliminarE;
+            this.botonEditar.BackgroundImage = GestionTabla.Properties.Resources.botonEditarE;
+            this.botonGuardar.BackgroundImage = GestionTabla.Properties.Resources.botonGuardarE;
+            this.botonBuscar.BackgroundImage = GestionTabla.Properties.Resources.botonBuscarE;
+            this.botonInicio.BackgroundImage = GestionTabla.Properties.Resources.botonPrincipioE;
+            this.botonAnterior.BackgroundImage = GestionTabla.Properties.Resources.botonAnteriorE;
+            this.botonSiguiente.BackgroundImage = GestionTabla.Properties.Resources.botonSiguienteE;
+            this.botonFinal.BackgroundImage = GestionTabla.Properties.Resources.botonFinalE;
             errorProvider1.Clear();
             toolStripStatusLabel1.Text = "Cancelada creacion de cliente";
         }
@@ -149,6 +178,18 @@ namespace GestionTabla
             this.botonAnterior.Enabled = false;
             this.botonSiguiente.Enabled = false;
             this.botonFinal.Enabled = false;
+
+            this.botonAceptar.BackgroundImage = GestionTabla.Properties.Resources.botonConfirmarE;
+            this.botonCancelar.BackgroundImage = GestionTabla.Properties.Resources.botonCancelarE;
+            this.botonAniadir.BackgroundImage = GestionTabla.Properties.Resources.botonAniadirD;
+            this.botonBorrar.BackgroundImage = GestionTabla.Properties.Resources.botonEliminarD;
+            this.botonEditar.BackgroundImage = GestionTabla.Properties.Resources.botonEditarD;
+            this.botonGuardar.BackgroundImage = GestionTabla.Properties.Resources.botonGuardarD;
+            this.botonBuscar.BackgroundImage = GestionTabla.Properties.Resources.botonBuscarD;
+            this.botonInicio.BackgroundImage = GestionTabla.Properties.Resources.botonPrincipioD;
+            this.botonAnterior.BackgroundImage = GestionTabla.Properties.Resources.botonAnteriorD;
+            this.botonSiguiente.BackgroundImage = GestionTabla.Properties.Resources.botonSiguienteD;
+            this.botonFinal.BackgroundImage = GestionTabla.Properties.Resources.botonFinalD;
         }
 
         private void nombreTextBox_Validating(object sender, CancelEventArgs e)
@@ -213,6 +254,18 @@ namespace GestionTabla
             this.botonAnterior.Enabled = false;
             this.botonSiguiente.Enabled = false;
             this.botonFinal.Enabled = false;
+
+            this.botonAceptar.BackgroundImage = GestionTabla.Properties.Resources.botonConfirmarE;
+            this.botonCancelar.BackgroundImage = GestionTabla.Properties.Resources.botonCancelarE;
+            this.botonAniadir.BackgroundImage = GestionTabla.Properties.Resources.botonAniadirD;
+            this.botonBorrar.BackgroundImage = GestionTabla.Properties.Resources.botonEliminarD;
+            this.botonEditar.BackgroundImage = GestionTabla.Properties.Resources.botonEditarD;
+            this.botonGuardar.BackgroundImage = GestionTabla.Properties.Resources.botonGuardarD;
+            this.botonBuscar.BackgroundImage = GestionTabla.Properties.Resources.botonBuscarD;
+            this.botonInicio.BackgroundImage = GestionTabla.Properties.Resources.botonPrincipioD;
+            this.botonAnterior.BackgroundImage = GestionTabla.Properties.Resources.botonAnteriorD;
+            this.botonSiguiente.BackgroundImage = GestionTabla.Properties.Resources.botonSiguienteD;
+            this.botonFinal.BackgroundImage = GestionTabla.Properties.Resources.botonFinalD;
         }
 
         private void botonBorrar_Click(object sender, EventArgs e)

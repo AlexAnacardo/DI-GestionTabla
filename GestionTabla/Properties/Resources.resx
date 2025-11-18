@@ -117,4 +117,71 @@
   <resheader name="writer">
     <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </resheader>
+  <assembly alias="System.Windows.Forms" name="System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" />
+  <data name="botonPrincipioE" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\botonPrincipioE.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="botonFinalE" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\botonFinalE.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="botonEditarE" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\botonEditarE.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="botonEliminarE" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\botonEliminarE.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="botonSiguienteE" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\botonSiguienteE.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="botonBuscarE" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\botonBuscarE.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="botonCancelarE" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\botonCancelarE.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="botonAnteriorE" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\botonAnteriorE.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="botonGuardarE" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\botonGuardarE.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="botonAniadirE" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\botonAniadirE.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="botonAniadirD" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\botonAniadirD.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="botonConfirmarE" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\botonConfirmarE.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="botonAnteriorD" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\botonAnteriorD.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="botonBuscarD" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\botonBuscarD.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="botonCancelarD" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\botonCancelarD.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="botonConfirmarD" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\botonConfirmarD.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="botonEditarD" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\botonEditarD.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="botonEliminarD" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\botonEliminarD.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="botonFinalD" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\botonFinalD.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="botonGuardarD" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\botonGuardarD.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="botonPrincipioD" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\botonPrincipioD.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="botonSiguienteD" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\botonSiguienteD.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
 </root>
