@@ -46,6 +46,7 @@ namespace GestionTabla
             toolTip1.SetToolTip(this.comboBoxFiltro, "Campo que se usará para filtrar la busqueda");
             toolTip1.SetToolTip(this.textBoxFiltro, "Cadena de texto a buscar en el campo especificado");
             toolTip1.SetToolTip(this.botonBuscar, "Buscar un registro en la tabla mediante la cadena y campo especificado");
+            toolTip1.SetToolTip(this.id_ClienteLabel1, "ID Único del usuario");
             toolTip1.SetToolTip(this.nombreTextBox, "Campo nombre del usuario (Obligatorio)");
             toolTip1.SetToolTip(this.apellidosTextBox, "Campo apellidos del usuario");
             toolTip1.SetToolTip(this.fechaNacTimePicker, "Campo fecha de nacimiento del usuario");
@@ -113,7 +114,7 @@ namespace GestionTabla
                 errorProvider1.SetError(correoTextBox, "El correo electrónico debe acabar en @gmail.com / @gmail.es / @outlook.es / @outlook.com");
                 toolStripStatusLabel1.Text = "Hay 1 o mas campos erroneos";
             }
-            if (!Regex.IsMatch(telefonoTextBox.Text, "[0-9]9", RegexOptions.IgnoreCase))
+            if (!Regex.IsMatch(telefonoTextBox.Text, @"^[0-9]{9}$", RegexOptions.IgnoreCase))
             {
                 errorProvider1.SetError(telefonoTextBox, "Formato de telefono invalido, debe seguir un formato 123456789");
             }
@@ -146,6 +147,7 @@ namespace GestionTabla
                 this.botonAnterior.BackgroundImage = GestionTabla.Properties.Resources.botonAnteriorE;
                 this.botonSiguiente.BackgroundImage = GestionTabla.Properties.Resources.botonSiguienteE;
                 this.botonFinal.BackgroundImage = GestionTabla.Properties.Resources.botonFinalE;
+                this.botonImprimir.BackgroundImage = GestionTabla.Properties.Resources.botonImprimirE;
 
                 errorProvider1.Clear();
 
@@ -181,6 +183,7 @@ namespace GestionTabla
             this.botonAnterior.BackgroundImage = GestionTabla.Properties.Resources.botonAnteriorE;
             this.botonSiguiente.BackgroundImage = GestionTabla.Properties.Resources.botonSiguienteE;
             this.botonFinal.BackgroundImage = GestionTabla.Properties.Resources.botonFinalE;
+            this.botonImprimir.BackgroundImage = GestionTabla.Properties.Resources.botonImprimirE;
             errorProvider1.Clear();
             toolStripStatusLabel1.Text = "Cancelada creacion de cliente";
         }
@@ -211,6 +214,7 @@ namespace GestionTabla
             this.botonAnterior.BackgroundImage = GestionTabla.Properties.Resources.botonAnteriorD;
             this.botonSiguiente.BackgroundImage = GestionTabla.Properties.Resources.botonSiguienteD;
             this.botonFinal.BackgroundImage = GestionTabla.Properties.Resources.botonFinalD;
+            this.botonImprimir.BackgroundImage = GestionTabla.Properties.Resources.botonImprimirD;
         }
 
         private void nombreTextBox_Validating(object sender, CancelEventArgs e)
@@ -243,7 +247,7 @@ namespace GestionTabla
             {
                 errorProvider1.SetError(telefonoTextBox, "Debe introducir el telefono");                
             }
-            else if (!Regex.IsMatch(telefonoTextBox.Text, "[0-9]9", RegexOptions.IgnoreCase))
+            else if (!Regex.IsMatch(telefonoTextBox.Text, @"^[0-9]{9}$", RegexOptions.IgnoreCase))
             {
                 errorProvider1.SetError(telefonoTextBox, "Formato de telefono invalido, debe seguir un formato 123456789");
             }
@@ -287,6 +291,7 @@ namespace GestionTabla
             this.botonAnterior.BackgroundImage = GestionTabla.Properties.Resources.botonAnteriorD;
             this.botonSiguiente.BackgroundImage = GestionTabla.Properties.Resources.botonSiguienteD;
             this.botonFinal.BackgroundImage = GestionTabla.Properties.Resources.botonFinalD;
+            this.botonImprimir.BackgroundImage = GestionTabla.Properties.Resources.botonImprimirD;
         }
 
         private void botonBorrar_Click(object sender, EventArgs e)
@@ -415,6 +420,49 @@ namespace GestionTabla
             {
                 MessageBox.Show("No se encontró ningún registro con el campo especificado", "Aviso", MessageBoxButtons.OK, MessageBoxIcon.Information);
             }
+        }
+
+        private void botonImprimir_Click(object sender, EventArgs e)
+        {
+            printDialog1.AllowPrintToFile = false;
+            printDialog1.AllowSelection = false;
+            printDialog1.AllowSomePages = false;
+            if (printDialog1.ShowDialog() == DialogResult.OK)
+            {
+                printDocument1.PrinterSettings = printDialog1.PrinterSettings;
+
+                try
+                {
+                    printDocument1.Print();
+                }
+                catch (Exception ex)
+                {
+                    MessageBox.Show("Error de impresion", "Imprimir imagen", MessageBoxButtons.OK, MessageBoxIcon.Exclamation);
+                }
+            }
+            else
+            {
+
+            }
+        }
+
+        private void printDocument1_PrintPage(object sender, System.Drawing.Printing.PrintPageEventArgs e)
+        {
+
+            e.Graphics.DrawString("Nombre: "+this.nombreTextBox.Text, this.Font, Brushes.Black, 0, 0);
+            e.Graphics.DrawString("Apellidos: " + this.apellidosTextBox.Text, this.Font, Brushes.Black, 0, 20);
+            e.Graphics.DrawString("Fecha nacimiento: " + this.fechaNacTimePicker.Text, this.Font, Brushes.Black, 0, 40);
+            e.Graphics.DrawString("Direccion: " + this.direccionTextBox.Text, this.Font, Brushes.Black, 0, 60);
+            e.Graphics.DrawString("Telefono: " + this.telefonoTextBox.Text, this.Font, Brushes.Black, 0, 80);
+            e.Graphics.DrawString("Correo: " + this.correoTextBox.Text, this.Font, Brushes.Black, 0, 100);
+              
+
+            if (imagenPictureBox.Image != null)
+            {
+                e.Graphics.DrawImage(imagenPictureBox.Image, 20, 120, 200, 400);
+            }
+            
+            
         }
     }
 }

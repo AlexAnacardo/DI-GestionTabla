@@ -56,6 +56,10 @@
             this.textBoxFiltro = new System.Windows.Forms.TextBox();
             this.comboBoxFiltro = new System.Windows.Forms.ComboBox();
             this.labelPaginacion = new System.Windows.Forms.Label();
+            this.toolTip1 = new System.Windows.Forms.ToolTip(this.components);
+            this.printDialog1 = new System.Windows.Forms.PrintDialog();
+            this.printDocument1 = new System.Drawing.Printing.PrintDocument();
+            this.botonImprimir = new System.Windows.Forms.Button();
             this.botonFinal = new System.Windows.Forms.Button();
             this.botonSiguiente = new System.Windows.Forms.Button();
             this.botonAnterior = new System.Windows.Forms.Button();
@@ -68,7 +72,6 @@
             this.botonCancelar = new System.Windows.Forms.Button();
             this.botonAceptar = new System.Windows.Forms.Button();
             this.imagenPictureBox = new System.Windows.Forms.PictureBox();
-            this.toolTip1 = new System.Windows.Forms.ToolTip(this.components);
             id_ClienteLabel = new System.Windows.Forms.Label();
             nombre_ClienteLabel = new System.Windows.Forms.Label();
             apellidos_ClienteLabel = new System.Windows.Forms.Label();
@@ -180,7 +183,7 @@
             // nombreTextBox
             // 
             this.nombreTextBox.DataBindings.Add(new System.Windows.Forms.Binding("Text", this.clientesBindingSource, "Nombre_Cliente", true));
-            this.nombreTextBox.Location = new System.Drawing.Point(206, 80);
+            this.nombreTextBox.Location = new System.Drawing.Point(206, 83);
             this.nombreTextBox.Name = "nombreTextBox";
             this.nombreTextBox.Size = new System.Drawing.Size(200, 20);
             this.nombreTextBox.TabIndex = 4;
@@ -189,7 +192,7 @@
             // apellidosTextBox
             // 
             this.apellidosTextBox.DataBindings.Add(new System.Windows.Forms.Binding("Text", this.clientesBindingSource, "Apellidos_Cliente", true));
-            this.apellidosTextBox.Location = new System.Drawing.Point(206, 113);
+            this.apellidosTextBox.Location = new System.Drawing.Point(206, 118);
             this.apellidosTextBox.Name = "apellidosTextBox";
             this.apellidosTextBox.Size = new System.Drawing.Size(200, 20);
             this.apellidosTextBox.TabIndex = 6;
@@ -197,7 +200,7 @@
             // fechaNacTimePicker
             // 
             this.fechaNacTimePicker.DataBindings.Add(new System.Windows.Forms.Binding("Value", this.clientesBindingSource, "Fecha_Nacimiento", true));
-            this.fechaNacTimePicker.Location = new System.Drawing.Point(206, 148);
+            this.fechaNacTimePicker.Location = new System.Drawing.Point(206, 151);
             this.fechaNacTimePicker.Name = "fechaNacTimePicker";
             this.fechaNacTimePicker.Size = new System.Drawing.Size(200, 20);
             this.fechaNacTimePicker.TabIndex = 8;
@@ -205,7 +208,7 @@
             // direccionTextBox
             // 
             this.direccionTextBox.DataBindings.Add(new System.Windows.Forms.Binding("Text", this.clientesBindingSource, "Direccion", true));
-            this.direccionTextBox.Location = new System.Drawing.Point(206, 184);
+            this.direccionTextBox.Location = new System.Drawing.Point(206, 191);
             this.direccionTextBox.Name = "direccionTextBox";
             this.direccionTextBox.Size = new System.Drawing.Size(200, 20);
             this.direccionTextBox.TabIndex = 10;
@@ -214,7 +217,7 @@
             // telefonoTextBox
             // 
             this.telefonoTextBox.DataBindings.Add(new System.Windows.Forms.Binding("Text", this.clientesBindingSource, "Telefono", true));
-            this.telefonoTextBox.Location = new System.Drawing.Point(206, 223);
+            this.telefonoTextBox.Location = new System.Drawing.Point(206, 228);
             this.telefonoTextBox.Name = "telefonoTextBox";
             this.telefonoTextBox.Size = new System.Drawing.Size(200, 20);
             this.telefonoTextBox.TabIndex = 12;
@@ -223,7 +226,7 @@
             // correoTextBox
             // 
             this.correoTextBox.DataBindings.Add(new System.Windows.Forms.Binding("Text", this.clientesBindingSource, "Correo_Electronico", true));
-            this.correoTextBox.Location = new System.Drawing.Point(206, 259);
+            this.correoTextBox.Location = new System.Drawing.Point(206, 262);
             this.correoTextBox.Name = "correoTextBox";
             this.correoTextBox.Size = new System.Drawing.Size(200, 20);
             this.correoTextBox.TabIndex = 14;
@@ -292,9 +295,9 @@
             // 
             // textBoxFiltro
             // 
-            this.textBoxFiltro.Location = new System.Drawing.Point(835, 27);
+            this.textBoxFiltro.Location = new System.Drawing.Point(814, 42);
             this.textBoxFiltro.Name = "textBoxFiltro";
-            this.textBoxFiltro.Size = new System.Drawing.Size(100, 20);
+            this.textBoxFiltro.Size = new System.Drawing.Size(121, 20);
             this.textBoxFiltro.TabIndex = 9;
             // 
             // comboBoxFiltro
@@ -309,7 +312,7 @@
             "Direccion",
             "Telefono",
             "Correo electrónico"});
-            this.comboBoxFiltro.Location = new System.Drawing.Point(695, 27);
+            this.comboBoxFiltro.Location = new System.Drawing.Point(814, 8);
             this.comboBoxFiltro.Name = "comboBoxFiltro";
             this.comboBoxFiltro.Size = new System.Drawing.Size(121, 21);
             this.comboBoxFiltro.TabIndex = 8;
@@ -322,6 +325,25 @@
             this.labelPaginacion.Size = new System.Drawing.Size(70, 13);
             this.labelPaginacion.TabIndex = 26;
             this.labelPaginacion.Text = "Cliente x de x";
+            // 
+            // printDialog1
+            // 
+            this.printDialog1.UseEXDialog = true;
+            // 
+            // printDocument1
+            // 
+            this.printDocument1.PrintPage += new System.Drawing.Printing.PrintPageEventHandler(this.printDocument1_PrintPage);
+            // 
+            // botonImprimir
+            // 
+            this.botonImprimir.BackgroundImage = global::GestionTabla.Properties.Resources.botonImprimirE;
+            this.botonImprimir.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.botonImprimir.Location = new System.Drawing.Point(715, 9);
+            this.botonImprimir.Name = "botonImprimir";
+            this.botonImprimir.Size = new System.Drawing.Size(60, 54);
+            this.botonImprimir.TabIndex = 27;
+            this.botonImprimir.UseVisualStyleBackColor = true;
+            this.botonImprimir.Click += new System.EventHandler(this.botonImprimir_Click);
             // 
             // botonFinal
             // 
@@ -404,7 +426,7 @@
             // 
             this.botonGuardar.BackgroundImage = global::GestionTabla.Properties.Resources.botonGuardarE;
             this.botonGuardar.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.botonGuardar.Location = new System.Drawing.Point(607, 9);
+            this.botonGuardar.Location = new System.Drawing.Point(612, 9);
             this.botonGuardar.Name = "botonGuardar";
             this.botonGuardar.Size = new System.Drawing.Size(60, 54);
             this.botonGuardar.TabIndex = 7;
@@ -463,6 +485,7 @@
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(1013, 426);
+            this.Controls.Add(this.botonImprimir);
             this.Controls.Add(this.labelPaginacion);
             this.Controls.Add(this.botonFinal);
             this.Controls.Add(this.botonSiguiente);
@@ -528,6 +551,9 @@
         private System.Windows.Forms.Button botonInicio;
         private System.Windows.Forms.Label labelPaginacion;
         private System.Windows.Forms.ToolTip toolTip1;
+        private System.Windows.Forms.Button botonImprimir;
+        private System.Windows.Forms.PrintDialog printDialog1;
+        private System.Drawing.Printing.PrintDocument printDocument1;
     }
 }
 

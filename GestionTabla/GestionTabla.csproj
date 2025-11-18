@@ -129,6 +129,8 @@
       <CopyToOutputDirectory>Always</CopyToOutputDirectory>
       <DependentUpon>Database1.mdf</DependentUpon>
     </Content>
+    <None Include="Resources\botonImprimirE.png" />
+    <None Include="Resources\botonImprimirD.png" />
     <None Include="Resources\botonSiguienteD.png" />
     <None Include="Resources\botonPrincipioD.png" />
     <None Include="Resources\botonGuardarD.png" />

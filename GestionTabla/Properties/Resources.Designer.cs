@@ -243,6 +243,26 @@ namespace GestionTabla.Properties {
         /// <summary>
         ///   Busca un recurso adaptado de tipo System.Drawing.Bitmap.
         /// </summary>
+        internal static System.Drawing.Bitmap botonImprimirD {
+            get {
+                object obj = ResourceManager.GetObject("botonImprimirD", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Busca un recurso adaptado de tipo System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap botonImprimirE {
+            get {
+                object obj = ResourceManager.GetObject("botonImprimirE", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Busca un recurso adaptado de tipo System.Drawing.Bitmap.
+        /// </summary>
         internal static System.Drawing.Bitmap botonPrincipioD {
             get {
                 object obj = ResourceManager.GetObject("botonPrincipioD", resourceCulture);
