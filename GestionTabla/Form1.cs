@@ -34,6 +34,27 @@ namespace GestionTabla
             toolStripStatusLabel1.Text = "";
 
             comboBoxFiltro.SelectedIndex = 0;
+
+            toolTip1.SetToolTip(this.botonInicio, "Ir al primer registro de la tabla");
+            toolTip1.SetToolTip(this.botonAnterior, "Ir al anterior registro de la tabla");
+            toolTip1.SetToolTip(this.botonSiguiente, "Ir al siguiente registro de la tabla");
+            toolTip1.SetToolTip(this.botonFinal, "Ir al último registro de la tabla");
+            toolTip1.SetToolTip(this.botonAniadir, "Añadir un registro a la tabla");
+            toolTip1.SetToolTip(this.botonBorrar, "Elimina el registro actual de la tabla");
+            toolTip1.SetToolTip(this.botonEditar, "Edita el registro actual de la tabla");
+            toolTip1.SetToolTip(this.botonGuardar, "Guarda los cambios realizados");
+            toolTip1.SetToolTip(this.comboBoxFiltro, "Campo que se usará para filtrar la busqueda");
+            toolTip1.SetToolTip(this.textBoxFiltro, "Cadena de texto a buscar en el campo especificado");
+            toolTip1.SetToolTip(this.botonBuscar, "Buscar un registro en la tabla mediante la cadena y campo especificado");
+            toolTip1.SetToolTip(this.nombreTextBox, "Campo nombre del usuario (Obligatorio)");
+            toolTip1.SetToolTip(this.apellidosTextBox, "Campo apellidos del usuario");
+            toolTip1.SetToolTip(this.fechaNacTimePicker, "Campo fecha de nacimiento del usuario");
+            toolTip1.SetToolTip(this.direccionTextBox, "Campo dirección del usuario (Obligatorio)");
+            toolTip1.SetToolTip(this.telefonoTextBox, "Campo télefono del usuario (Campo obligatorio, debe consistir de 9 números enteros)");
+            toolTip1.SetToolTip(this.correoTextBox, "Campo correo electrónico del usuario (Opcional, pero de introducirse debe terminar en @gmail.com/@gmail.es/@outlook.com/@outlook.es");
+            toolTip1.SetToolTip(this.imagenPictureBox, "Campo imagen del usuario");
+            toolTip1.SetToolTip(this.botonAceptar, "Añade los datos introducidos a la tabla de usuarios (Si pasan la validación)");
+            toolTip1.SetToolTip(this.botonCancelar, "Cancela la operación de añadir un usuario a la tabla");
         }
 
         private void clientesBindingNavigatorSaveItem_Click(object sender, EventArgs e)

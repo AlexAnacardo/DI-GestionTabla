@@ -68,6 +68,7 @@
             this.botonCancelar = new System.Windows.Forms.Button();
             this.botonAceptar = new System.Windows.Forms.Button();
             this.imagenPictureBox = new System.Windows.Forms.PictureBox();
+            this.toolTip1 = new System.Windows.Forms.ToolTip(this.components);
             id_ClienteLabel = new System.Windows.Forms.Label();
             nombre_ClienteLabel = new System.Windows.Forms.Label();
             apellidos_ClienteLabel = new System.Windows.Forms.Label();
@@ -526,6 +527,7 @@
         private System.Windows.Forms.Button botonAnterior;
         private System.Windows.Forms.Button botonInicio;
         private System.Windows.Forms.Label labelPaginacion;
+        private System.Windows.Forms.ToolTip toolTip1;
     }
 }
 
